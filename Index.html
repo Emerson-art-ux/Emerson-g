@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa história</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf0f5;
+            overflow-y: scroll;
+        }
+        header {
+            background-color: #8c0013;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #e90a97;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            gap: 10px;
+        }
+        nav button {
+            background: none;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+            padding: 8px 18px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        nav button:hover {
+            background-color: white;
+            color: #e90a97;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            min-height: 300px;
+            margin-bottom: 50px;
+        }
+        .conteudo {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .ativo {
+            display: block;
+            opacity: 1;
+        }
+        .img-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .img-container img {
+            width: 400px;  
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        /* Áudio centralizado acima da imagem */
+        .audio-player {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #e90a97;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo, meu amor ❤️</h1>
+    </header>
+
+    <nav>
+        <button onclick="mostrar('Emerson & Ediane')">Emerson & Ediane</button>
+        <button onclick="mostrar('Foto do casal')">Foto do casal</button>
+        
+        <button onclick="mostrar('historia')">História</button>
+    </nav>
+
+    <main>
+        <div id="Emerson & Ediane" class="conteudo ativo">
+            <h2>Emerson & Ediane</h2>
+            <p>Essa página foi criada com muito carinho, para contar um pouco da nossa história e também pra te mostrar o quanto você e especial para mim o quanto eu amo você. Futuramnete quando estivermos nomorando podemos até ativar essa página para guardar nossos momentos especiais, fotos  💖.</p>
+
+            <!-- Áudio acima da imagem -->
+            <audio class="audio-player" controls>
+                <source src="Áudio do WhatsApp de 2025-08-13 à(s) 10.25.21_096ad0a4.dat.unknown" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+
+            <div class="img-container">
+                <img src="2.jpg" alt="Foto romântica">
+                 <img src="1.jpg" alt="Foto romântica">
+            </div>
+        </div>
+
+        <div id="Foto do casal" class="conteudo">
+            <h2>Foto do casal</h2>
+            <p>Não temos foto juntos ainda, estou esperando a oportunidade de poder tirar uma foto com meu amor.</p>
+           
+            <div class="img-container">
+                <img src="3.jpg" alt="Foto de casal">
+            </div>
+        </div>
+
+
+        <div id="historia" class="conteudo">
+            <h2>História</h2>
+            <p>De 2023 pra sempre, nossa história está sendo escrita a cada dia.  
+               Momentos de carinho, sorrisos e muito amor. A dois anos atrás chegou um solicitação de amizade de um garota q eu já mais pensava q ia amar tanto assim, fomos conversando a amizade foi nascendo foi crescendo até virar o amor q a gente sente um pelo o outro hoje, foram vários poemas, várias cantadas, diversas brincadeiras assim eu fui te conquistando e aos poucos entrando nesse coração q já estava até meio gelado né kkk, cada poema, cantada, músicas que eu fazia para você na tentativa de te conquistar eu me apegava mais a você, hoje já não consigo mais ficar sem falar contigo você se tornou uma das pessoas mais importantes pra mim, meu coração bate mais forte quando penso em vc. uma amizade e um amor q nasceu e está crescendo de uma forma tão estranha né, a gente nunca se viu nunca deu um abraço mas a continua seguindo nesse caminho separados pela a distância mas juntos na mente e no coração a gente segue amando mesmo estando distantes, obrigado por tudo você e uma pessoa incrível te amo muito.🫶  ❤️.</p>
+            <div class="img-container">
+                <img src="4.jpg" alt="Momentos especiais">
+                <img src="5.jpg" alt="Momentos especiais">
+                <img src="6.jpg" alt="Momentos especiais">
+                <img src="7.jpg" alt="Momentos especiais">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; De 2023 pra vida toda — Criado por Emerson pra Ediane 💖</p>
+    </footer>
+
+    <script>
+        function mostrar(id) {
+            document.querySelectorAll('.conteudo').forEach(div => {
+                div.classList.remove('ativo');
+            });
+            setTimeout(() => {
+                document.getElementById(id).classList.add('ativo');
+            }, 100);
+        }
+    </script>
+</body>
+</html>
+

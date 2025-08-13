@@ -1,0 +1,4 @@
+.img-container img {
+       width: auto; /* largura desejada */
+    height: auto; /* mantém proporção */
+}
